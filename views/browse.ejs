@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image" href="/favicon-32x32.png">
+    <link rel="stylesheet" href="tech_home.css">
+    <link rel="stylesheet" href="browse.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="aside.css">
+    <script src="/tech.js" defer></script>
+</head>
+
+<body>
+   <%-include("includes/common")  %>
+    <main id="browse_content">
+       
+        <% if (number_of_tech==0) { %>
+               <ul id="no_content">
+            <li>
+                <h2>Unfortunately,we have no Technologies yet so-maybe start recommending some?</h2>
+            </li>
+        </ul>
+       
+     <%} else { %>
+        <div id="content_header">
+            <h2>Recommended Technologies</h2>
+            <h3>We found <%=number_of_tech  %> number of Recomndations</h3>
+            <form action="/browse" method="get">
+                <input type="hidden" name="order" value="asc">
+                <button id="btnn">Sort Ascending</button>
+            </form>
+        </div>
+        <% let i=0 %>
+        
+        <% for(const res of tech_users) { %>
+        <ul id="content">
+            <li>Tech Number :<%= ++i  %></li>
+            <li>
+                Name:<%= res.name %>
+            </li>
+            <li>Best platform to find this Technology:<%= res.platform %></li>
+            <li>Type of Technology:<%=res.tech_name  %></li>
+            <li>Why recommended:<%=res.Why_recommended  %></li><li>
+                <button id="btn"><a href="/browse/<%= res.id %>">View Restaurant</a></button>
+            </li>
+        </ul>
+        <% } %>
+        <%}%>
+
+    </main>
+</body>

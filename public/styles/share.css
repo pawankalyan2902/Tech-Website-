@@ -1,0 +1,45 @@
+#data{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    background-color:rgb(216, 190, 133);
+    padding: 2rem 3rem 2rem 3rem;
+    width: 40rem;
+    margin: auto;
+    margin-bottom: 3rem;
+
+}
+h1{
+    text-align: center;
+}
+#data li{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem
+}
+input{
+    height: 2.5rem;
+    font-size: large;
+}
+label{
+    text-align: justify;
+    font-size: x-large;
+    margin-bottom: 0.5rem
+}
+#btn{
+    background-color: rgb(202, 158, 62);
+    border: transparent;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    left: 10px;
+    width: 6rem;
+    height: 3rem;
+    font-size: large;
+    margin-top: 1rem;
+}
+aside{
+    display: none;
+}

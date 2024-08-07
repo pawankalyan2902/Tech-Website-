@@ -1,0 +1,17 @@
+#main_content li{
+    list-style: none;
+    color: gray;
+}
+#main_content{
+    background-color:rgb(255 232 182); 
+    padding: 1rem;
+    width: 33rem;
+    text-align: center;
+    margin: auto;
+    box-shadow: 2px 2px 2px black;
+    text-align: justify;
+}
+h1{
+    text-align: center;
+    color: #cb9855;;
+}
